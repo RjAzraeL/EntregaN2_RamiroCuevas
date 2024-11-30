@@ -1,0 +1,253 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html, body {
+    background-color: #000000;
+    overflow-x: hidden; 
+}
+
+header {
+    background-color: #000000;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    box-shadow: 0 4px 8px #0000007a;
+    z-index: 2000;
+    transition: all 0.3s ease;
+}
+
+#logo {
+    font-size: 26px;
+    text-shadow: 2px 2px 4px #bc9fffc1;
+    letter-spacing: 8px;
+    font-family: 'Playwrite GB S', sans-serif;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+nav a {
+    padding: 10px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    border: 2px solid transparent;
+    background-color: transparent;
+    transition: all 0.25s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background-color: transparent;
+    border-color: #ffffff;
+}
+
+nav a.active {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+}
+
+nav a.active:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 120vh;
+    overflow: hidden;
+}
+
+.slider-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider-item.active {
+    opacity: 1;
+}
+
+.slider-media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000c1;
+    text-align: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+footer {
+    background-color: #282A35;
+    padding: 20px 10px;
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+footer .networks {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+footer .networks a {
+    display: inline-block;
+}
+
+footer img {
+    height: 50px;
+    filter: invert(100%);
+    transition: all 0.25s ease;
+}
+
+footer img:hover {
+    filter: invert(0%);
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+footer div a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.25s ease;
+}
+
+footer div a:hover {
+    color: #bbbbbb;
+}
+
+@media (max-width: 800px) {
+    nav {
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    #logo {
+        font-size: 22px;
+        letter-spacing: 6px;
+    }
+    footer img {
+        height: 40px;
+    }
+
+    footer div a {
+        font-size: 13px;
+    }
+    .slider-text {
+        font-size: 1.4rem;
+
+    }
+}
+
+@media (max-width: 640px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: #000000;
+        border: 1px solid #ffffff;
+        width: 200px;
+        box-shadow: 0 4px 8px #0000007a;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid #ffffff;
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .hamburger div {
+        background-color: #ffffff;
+        height: 3px;
+        width: 100%;
+        border-radius: 2px;
+    }
+
+    #logo {
+        font-size: 20px;
+        letter-spacing: 5px;
+    }
+
+    .slider-text {
+        font-size: 1rem;
+
+    }
+
+    footer {
+        padding: 15px 5px;
+        gap: 15px;
+    }
+
+    footer .networks {
+        gap: 10px;
+    }
+
+    footer img {
+        height: 35px;
+    }
+
+    footer div a {
+        font-size: 12px;
+    }
+}
